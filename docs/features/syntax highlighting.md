@@ -8,7 +8,7 @@ Syntax highlighting in Quartz is completely done at build-time. This means that 
 
 And, unlike some client-side highlighters, it has a full TextMate parser grammar instead of using Regexes, allowing for highly accurate code highlighting.
 
-In short, it generates HTML that looks exactly like your code in an editor like VS Code. Under the hood, it's powered by [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/) which uses [Shiki](https://github.com/shikijs/shiki).
+In short, it generates HTML that looks exactly like your code in an editor like VS Code. Under the hood, it's powered by [[Rehype Pretty Code]] which uses [[Shiki]].
 
 > [!warning]
 > Syntax highlighting does have an impact on build speed if you have a lot of code snippets in your notes.

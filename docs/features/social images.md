@@ -13,7 +13,7 @@ After enabling `generateSocialImages` in `quartz.config.ts`, the social media li
 | ----------------------------------- | ---------------------------------- |
 | ![[social-image-preview-light.png]] | ![[social-image-preview-dark.png]] |
 
-For testing, it is recommended to use [opengraph.xyz](https://www.opengraph.xyz/) to see what the link to your page will look like on various platforms (more info under [[social images#local testing]]).
+For testing, it is recommended to use [[opengraph.xyz]] to see what the link to your page will look like on various platforms (more info under [[social images#local testing]]).
 
 ## Customization
 
@@ -57,13 +57,13 @@ The `socialImage` property should contain a link to an image relative to `quartz
 
 ### Fully customized image generation
 
-You can fully customize how the images being generated look by passing your own component to `generateSocialImages.imageStructure`. This component takes html/css + some page metadata/config options and converts it to an image using [satori](https://github.com/vercel/satori). Vercel provides an [online playground](https://og-playground.vercel.app/) that can be used to preview how your html/css looks like as a picture. This is ideal for prototyping your custom design.
+You can fully customize how the images being generated look by passing your own component to `generateSocialImages.imageStructure`. This component takes html/css + some page metadata/config options and converts it to an image using [[satori]]. Vercel provides an [[online playground]] that can be used to preview how your html/css looks like as a picture. This is ideal for prototyping your custom design.
 
 It is recommended to write your own image components in `quartz/util/og.tsx` or any other `.tsx` file, as passing them to the config won't work otherwise. An example of the default image component can be found in `og.tsx` in `defaultImage()`.
 
 > [!tip] Hint
 >
-> Satori only supports a subset of all valid CSS properties. All supported properties can be found in their [documentation](https://github.com/vercel/satori#css).
+> Satori only supports a subset of all valid CSS properties. All supported properties can be found in their [[documentation]].
 
 Your custom image component should have the `SocialImageOptions["imageStructure"]` type, to make development easier for you. Using a component of this type, you will be passed the following variables:
 
@@ -99,7 +99,7 @@ Now, you can let your creativity flow and design your own image component! For r
 
 ### Fonts
 
-You will also be passed an array containing a header and a body font (where the first entry is header and the second is body). The fonts matches the ones selected in `theme.typography.header` and `theme.typography.body` from `quartz.config.ts` and will be passed in the format required by [`satori`](https://github.com/vercel/satori). To use them in CSS, use the `.name` property (e.g. `fontFamily: fonts[1].name` to use the "body" font family).
+You will also be passed an array containing a header and a body font (where the first entry is header and the second is body). The fonts matches the ones selected in `theme.typography.header` and `theme.typography.body` from `quartz.config.ts` and will be passed in the format required by [[`satori`]]. To use them in CSS, use the `.name` property (e.g. `fontFamily: fonts[1].name` to use the "body" font family).
 
 An example of a component using the header font could look like this:
 
@@ -152,15 +152,15 @@ export const myImage: SocialImageOptions["imageStructure"] = (...) => {
 
 ### Local testing
 
-To test how the full preview of your page is going to look even before deploying, you can forward the port you're serving quartz on. In VSCode, this can easily be achieved following [this guide](https://code.visualstudio.com/docs/editor/port-forwarding) (make sure to set `Visibility` to `public` if testing on external tools like [opengraph.xyz](https://www.opengraph.xyz/)).
+To test how the full preview of your page is going to look even before deploying, you can forward the port you're serving quartz on. In VSCode, this can easily be achieved following [[this guide]] (make sure to set `Visibility` to `public` if testing on external tools like [[opengraph.xyz]]).
 
 If you have `generateSocialImages` enabled, you can check out all generated images under `public/static/social-images`.
 
 ## Technical info
 
-Images will be generated as `.webp` files, which helps to keep images small (the average image takes ~`19kB`). They are also compressed further using [sharp](https://sharp.pixelplumbing.com/).
+Images will be generated as `.webp` files, which helps to keep images small (the average image takes ~`19kB`). They are also compressed further using [[sharp]].
 
-When using images, the appropriate [Open Graph](https://ogp.me/) and [Twitter](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started) meta tags will be set to ensure they work and look as expected.
+When using images, the appropriate [[Open Graph]] and [[Twitter]] meta tags will be set to ensure they work and look as expected.
 
 ## Examples
 

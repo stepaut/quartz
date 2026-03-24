@@ -55,7 +55,7 @@ export default ((userOpts?: Options) => {
 
 ### Props
 
-The Quartz component itself (lines 11-17 highlighted above) looks like a React component. It takes in properties (sometimes called [props](https://react.dev/learn/passing-props-to-a-component)) and returns JSX.
+The Quartz component itself (lines 11-17 highlighted above) looks like a React component. It takes in properties (sometimes called [[props]]) and returns JSX.
 
 All Quartz components accept the same set of props:
 
@@ -74,7 +74,7 @@ export type QuartzComponentProps = {
   - `fileData.slug`: slug of the current page.
   - `fileData.frontmatter`: any frontmatter parsed.
 - `cfg`: The `configuration` field in `quartz.config.ts`.
-- `tree`: the resulting [HTML AST](https://github.com/syntax-tree/hast) after processing and transforming the file. This is useful if you'd like to render the content using [hast-util-to-jsx-runtime](https://github.com/syntax-tree/hast-util-to-jsx-runtime) (you can find an example of this in `quartz/components/pages/Content.tsx`).
+- `tree`: the resulting [[HTML AST]] after processing and transforming the file. This is useful if you'd like to render the content using [[hast-util-to-jsx-runtime]] (you can find an example of this in `quartz/components/pages/Content.tsx`).
 - `allFiles`: Metadata for all files that have been parsed. Useful for doing page listings or figuring out the overall site structure.
 - `displayClass`: a utility class that indicates a preference from the user about how to render it in a mobile or desktop setting. Helpful if you want to conditionally hide a component on mobile or desktop.
 

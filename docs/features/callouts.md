@@ -16,7 +16,7 @@ This includes
 > This is a callout!
 ```
 
-See [documentation on supported types and syntax here](https://help.obsidian.md/Editing+and+formatting/Callouts).
+See [[documentation on supported types and syntax here]].
 
 > [!warning]
 > Wondering why callouts may not be showing up even if you have them enabled? You may need to reorder your plugins so that [[ObsidianFlavoredMarkdown]] is _after_ [[SyntaxHighlighting]].
@@ -43,7 +43,7 @@ By default, custom callouts are handled by applying the `note` style. To make fa
 ```
 
 > [!warning]
-> Don't forget to ensure that the SVG is URL encoded before putting it in the CSS. You can use tools like [this one](https://yoksel.github.io/url-encoder/) to help you do that.
+> Don't forget to ensure that the SVG is URL encoded before putting it in the CSS. You can use tools like [[this one]] to help you do that.
 
 ## Showcase
 

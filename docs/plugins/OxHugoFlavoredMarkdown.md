@@ -4,7 +4,7 @@ tags:
   - plugin/transformer
 ---
 
-This plugin provides support for [ox-hugo](https://github.com/kaushalmodi/ox-hugo) compatibility. See [[OxHugo compatibility]] for more information.
+This plugin provides support for [[ox-hugo]] compatibility. See [[OxHugo compatibility]] for more information.
 
 > [!note]
 > For information on how to add, remove or configure plugins, see the [[configuration#Plugins|Configuration]] page.
@@ -26,4 +26,4 @@ This plugin accepts the following configuration options:
 
 - Category: Transformer
 - Function name: `Plugin.OxHugoFlavoredMarkdown()`.
-- Source: [`quartz/plugins/transformers/oxhugofm.ts`](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/transformers/oxhugofm.ts).
+- Source: [[`quartz/plugins/transformers/oxhugofm.ts`]].

@@ -46,12 +46,12 @@ export type QuartzTransformerPluginInstance = {
 
 All transformer plugins must define at least a `name` field to register the plugin and a few optional functions that allow you to hook into various parts of transforming a single Markdown file.
 
-- `textTransform` performs a text-to-text transformation _before_ a file is parsed into the [Markdown AST](https://github.com/syntax-tree/mdast).
-- `markdownPlugins` defines a list of [remark plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md). `remark` is a tool that transforms Markdown to Markdown in a structured way.
-- `htmlPlugins` defines a list of [rehype plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md). Similar to how `remark` works, `rehype` is a tool that transforms HTML to HTML in a structured way.
+- `textTransform` performs a text-to-text transformation _before_ a file is parsed into the [[Markdown AST]].
+- `markdownPlugins` defines a list of [[remark plugins]]. `remark` is a tool that transforms Markdown to Markdown in a structured way.
+- `htmlPlugins` defines a list of [[rehype plugins]]. Similar to how `remark` works, `rehype` is a tool that transforms HTML to HTML in a structured way.
 - `externalResources` defines any external resources the plugin may need to load on the client-side for it to work properly.
 
-Normally for both `remark` and `rehype`, you can find existing plugins that you can use to . If you'd like to create your own `remark` or `rehype` plugin, checkout the [guide to creating a plugin](https://unifiedjs.com/learn/guide/create-a-plugin/) using `unified` (the underlying AST parser and transformer library).
+Normally for both `remark` and `rehype`, you can find existing plugins that you can use to . If you'd like to create your own `remark` or `rehype` plugin, checkout the [[guide to creating a plugin]] using `unified` (the underlying AST parser and transformer library).
 
 A good example of a transformer plugin that borrows from the `remark` and `rehype` ecosystems is the [[plugins/Latex|Latex]] plugin:
 
@@ -229,7 +229,7 @@ export type QuartzEmitterPluginInstance = {
 
 An emitter plugin must define a `name` field, an `emit` function, and a `getQuartzComponents` function. `emit` is responsible for looking at all the parsed and filtered content and then appropriately creating files and returning a list of paths to files the plugin created.
 
-Creating new files can be done via regular Node [fs module](https://nodejs.org/api/fs.html) (i.e. `fs.cp` or `fs.writeFile`) or via the `write` function in `quartz/plugins/emitters/helpers.ts` if you are creating files that contain text. `write` has the following signature:
+Creating new files can be done via regular Node [[fs module]] (i.e. `fs.cp` or `fs.writeFile`) or via the `write` function in `quartz/plugins/emitters/helpers.ts` if you are creating files that contain text. `write` has the following signature:
 
 ```ts
 export type WriteOptions = (data: {

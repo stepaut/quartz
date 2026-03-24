@@ -4,7 +4,7 @@ tags:
   - plugin/transformer
 ---
 
-This plugin provides support for [Roam Research](https://roamresearch.com) compatibility. See [[Roam Research Compatibility]] for more information.
+This plugin provides support for [[Roam Research]] compatibility. See [[Roam Research Compatibility]] for more information.
 
 > [!note]
 > For information on how to add, remove or configure plugins, see the [[Configuration#Plugins|Configuration]] page.
@@ -23,4 +23,4 @@ This plugin accepts the following configuration options:
 
 - Category: Transformer
 - Function name: `Plugin.RoamFlavoredMarkdown()`.
-- Source: [`quartz/plugins/transformers/roam.ts`](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/transformers/roam.ts).
+- Source: [[`quartz/plugins/transformers/roam.ts`]].

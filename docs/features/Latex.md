@@ -4,7 +4,7 @@ tags:
   - feature/transformer
 ---
 
-Quartz uses [Katex](https://katex.org/) by default to typeset both inline and block math expressions at build time.
+Quartz uses [[Katex]] by default to typeset both inline and block math expressions at build time.
 
 ## Syntax
 
@@ -51,7 +51,7 @@ Ef(x) &= -\frac{\hbar^2}{2m} [4k^2x^2f(x)-4kxf'(x) + f''(x)] + \frac{1}{2}m\omeg
 $$
 
 > [!warn]
-> Due to limitations in the [underlying parsing library](https://github.com/remarkjs/remark-math), block math in Quartz requires the `$$` delimiters to be on newlines like above.
+> Due to limitations in the [[underlying parsing library]], block math in Quartz requires the `$$` delimiters to be on newlines like above.
 
 ### Inline Math
 

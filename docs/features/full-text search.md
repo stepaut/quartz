@@ -4,7 +4,7 @@ tags:
   - component
 ---
 
-Full-text search in Quartz is powered by [Flexsearch](https://github.com/nextapps-de/flexsearch). It's fast enough to return search results in under 10ms for Quartzs as large as half a million words.
+Full-text search in Quartz is powered by [[Flexsearch]]. It's fast enough to return search results in under 10ms for Quartzs as large as half a million words.
 
 It can be opened by either clicking on the search bar or pressing `⌘`/`ctrl` + `K`. The top 5 search results are shown on each query. Matching subterms are highlighted and the most relevant 30 words are excerpted. Clicking on a search result will navigate to that page.
 

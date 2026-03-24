@@ -6,9 +6,9 @@ Paths are pretty complex to reason about because, especially for a static site g
 
 A full file path to a piece of content? Also a path. What about a slug for a piece of content? Yet another path.
 
-It would be silly to type these all as `string` and call it a day as it's pretty common to accidentally mistake one type of path for another. Unfortunately, TypeScript does not have [nominal types](https://en.wikipedia.org/wiki/Nominal_type_system) for type aliases meaning even if you made custom types of a server-side slug or a client-slug slug, you can still accidentally assign one to another and TypeScript wouldn't catch it.
+It would be silly to type these all as `string` and call it a day as it's pretty common to accidentally mistake one type of path for another. Unfortunately, TypeScript does not have [[nominal types]] for type aliases meaning even if you made custom types of a server-side slug or a client-slug slug, you can still accidentally assign one to another and TypeScript wouldn't catch it.
 
-Luckily, we can mimic nominal typing using [brands](https://www.typescriptlang.org/play#example/nominal-typing).
+Luckily, we can mimic nominal typing using [[brands]].
 
 ```typescript
 // instead of

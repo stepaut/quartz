@@ -14,7 +14,7 @@ However, if you'd like to publish your site to the world, you need a way to host
 
 ## Cloudflare Pages
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/) and select your account.
+1. Log in to the [[Cloudflare dashboard]] and select your account.
 2. In Account Home, select **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
 3. Select the new GitHub repository that you created and, in the **Set up builds and deployments** section, provide the following information:
 
@@ -27,7 +27,7 @@ However, if you'd like to publish your site to the world, you need a way to host
 
 Press "Save and deploy" and Cloudflare should have a deployed version of your site in about a minute. Then, every time you sync your Quartz changes to GitHub, your site should be updated.
 
-To add a custom domain, check out [Cloudflare's documentation](https://developers.cloudflare.com/pages/platform/custom-domains/).
+To add a custom domain, check out [[Cloudflare's documentation]].
 
 > [!warning]
 > Cloudflare Pages performs a shallow clone by default, so if you rely on `git` for timestamps, it is recommended that you add `git fetch --unshallow &&` to the beginning of the build command (e.g., `git fetch --unshallow && npx quartz build`).
@@ -114,7 +114,7 @@ Here's how to add a custom domain to your GitHub pages deployment.
 
 ![[dns records.png]]_The above shows a screenshot of Google Domains configured for both `jzhao.xyz` (an apex domain) and `quartz.jzhao.xyz` (a subdomain)._
 
-See the [GitHub documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) for more detail about how to setup your own custom domain with GitHub Pages.
+See the [[GitHub documentation]] for more detail about how to setup your own custom domain with GitHub Pages.
 
 > [!question] Why aren't my changes showing up?
 > There could be many different reasons why your changes aren't showing up but the most likely reason is that you forgot to push your changes to GitHub.
@@ -135,7 +135,7 @@ Before deploying to Vercel, a `vercel.json` file is required at the root of the 
 
 ### Deploy to Vercel
 
-1. Log in to the [Vercel Dashboard](https://vercel.com/dashboard) and click "Add New..." > Project
+1. Log in to the [[Vercel Dashboard]] and click "Add New..." > Project
 2. Import the Git repository containing your Quartz project.
 3. Give the project a name (lowercase characters and hyphens only)
 4. Check that these configuration options are set:
@@ -154,7 +154,7 @@ Before deploying to Vercel, a `vercel.json` file is required at the root of the 
 > If there is something already hosted on the domain, these steps will not work without replacing the previous content. As a workaround, you could use Next.js rewrites or use the next section to create a subdomain.
 
 1. Update the `baseUrl` in `quartz.config.js` if necessary.
-2. Go to the [Domains - Dashboard](https://vercel.com/dashboard/domains) page in Vercel.
+2. Go to the [[Domains - Dashboard]] page in Vercel.
 3. Connect the domain to Vercel
 4. Press "Add" to connect a custom domain to Vercel.
 5. Select your Quartz repository and press Continue.
@@ -166,14 +166,14 @@ Before deploying to Vercel, a `vercel.json` file is required at the root of the 
 Using `docs.example.com` is an example of a subdomain. They're a simple way of connecting multiple deployments to one domain.
 
 1. Update the `baseUrl` in `quartz.config.js` if necessary.
-2. Ensure your domain has been added to the [Domains - Dashboard](https://vercel.com/dashboard/domains) page in Vercel.
-3. Go to the [Vercel Dashboard](https://vercel.com/dashboard) and select your Quartz project.
+2. Ensure your domain has been added to the [[Domains - Dashboard]] page in Vercel.
+3. Go to the [[Vercel Dashboard]] and select your Quartz project.
 4. Go to the Settings tab and then click Domains in the sidebar
 5. Enter your subdomain into the field and press Add
 
 ## Netlify
 
-1. Log in to the [Netlify dashboard](https://app.netlify.com/) and click "Add new site".
+1. Log in to the [[Netlify dashboard]] and click "Add new site".
 2. Select your Git provider and repository containing your Quartz project.
 3. Under "Build command", enter `npx quartz build`.
 4. Under "Publish directory", enter `public`.
